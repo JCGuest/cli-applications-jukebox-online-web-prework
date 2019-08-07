@@ -43,8 +43,8 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-   song_name = gets.strip
-   if song_name == (1...9)
+   response = gets.strip
+   if response.to_i >= 1 && response.to_i <= songs.length
    puts "Playing <song_name>"
     else 
       puts "Invalid input, please try again"
