@@ -3,7 +3,7 @@ def say_hello(name)
 end
 puts "Enter your name."
 
-user_name = gets.strip
+user_name = gets.chomp
 
 puts 
 say_hello(user_name)
