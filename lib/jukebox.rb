@@ -20,7 +20,7 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
-def help_method
+def help_jukebox
   puts "I accept the following commands:"
   puts "- help : Displays this help message"
   puts "- list : Displays a list of songs you can play"
@@ -29,7 +29,7 @@ def help_method
 end
 
 
-def list_method(songs)
+def list_jukebox(songs)
   puts "1. Phoenix - 1901
 2. Tokyo Police Club - Wait Up
 3. Sufjan Stevens - Too Much
@@ -41,7 +41,7 @@ def list_method(songs)
 9. Amos Lee - Keep It Loose, Keep It Tight"
 end
 
-def play_method(songs)
+def play_jukebox(songs)
   puts "Please enter a song name or number:"
    song_name = gets.strip
    if song_name == (1...9)
@@ -51,14 +51,15 @@ def play_method(songs)
 end
 
 
-def exit 
+def exit_jukebox
   puts "Goodbye"
 end 
 
-def run
+def run_jukebox
   help_method
   puts "Please enter a command"
   user_input = gets.strip
-  
+  if user_input == "exit"
+    exit_jukebox
    
   
