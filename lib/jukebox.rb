@@ -21,11 +21,30 @@ songs = [
 ]
 
 def help_method
-  puts I accept the following commands:
-  puts - help : displays this help message
-  puts - list : displays a list of songs you can play
-  puts - play : lets you choose a song to play
-  puts - exit : exits this program
+  puts "I accept the following commands:"
+  puts "- help : Displays this help message"
+  puts "- list : Displays a list of songs you can play"
+  puts "- play : Lets you choose a song to play"
+  puts "- exit : Exits this program"
 end
+
+
 def list_method(songs)
+  puts "1. Phoenix - 1901
+2. Tokyo Police Club - Wait Up
+3. Sufjan Stevens - Too Much
+4. The Naked and the Famous - Young Blood
+5. (Far From) Home - Tiga
+6. The Cults - Abducted
+7. Phoenix - Consolation Prizes
+8. Harry Chapin - Cats in the Cradle
+9. Amos Lee - Keep It Loose, Keep It Tight"
+end
+
+def play_method(songs)
+  puts "Please enter a song name or number:"
+   song_choice = gets.strip
+   
+   puts 
+   
   
