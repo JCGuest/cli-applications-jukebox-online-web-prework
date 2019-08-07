@@ -20,7 +20,7 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
-def help_jukebox
+def help
   puts "I accept the following commands:"
   puts "- help : Displays this help message"
   puts "- list : Displays a list of songs you can play"
