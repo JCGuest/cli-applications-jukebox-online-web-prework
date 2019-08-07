@@ -29,7 +29,7 @@ def help_jukebox
 end
 
 
-def list_jukebox(songs)
+def list(songs)
   puts "1. Phoenix - 1901
 2. Tokyo Police Club - Wait Up
 3. Sufjan Stevens - Too Much
@@ -41,7 +41,7 @@ def list_jukebox(songs)
 9. Amos Lee - Keep It Loose, Keep It Tight"
 end
 
-def play_jukebox(songs)
+def play(songs)
   puts "Please enter a song name or number:"
    song_name = gets.strip
    if song_name == (1...9)
@@ -55,11 +55,24 @@ def exit_jukebox
   puts "Goodbye"
 end 
 
-def run_jukebox
-  help_method
-  puts "Please enter a command"
-  user_input = gets.strip
-  if user_input == "exit"
-    exit_jukebox
+def run(songs)
+  while true do
+    puts "Please enter a command:"
+    response = gets.chomp
+    case response
+    when "exit"
+      exit_jukebox
+      break
+    when "play"
+      play(songs)
+    when "help"
+      help
+    when "list"
+      list(songs)
+    else
+      puts "Invalid entry"
+    end
+  end
+end
    
   
